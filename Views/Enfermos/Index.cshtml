@@ -1,0 +1,12 @@
+﻿@model List<Enfermo>
+<h1>Enfermos linq to SQL</h1>
+<ul class="list-group">
+
+    @foreach (Enfermo enf in Model)
+    {
+        <li class="list-group-item">
+            @enf.Apellido - @enf.Direccion - 
+            <a asp-controller="Enfermos" asp-action="Details" asp-route-inscripcion="@enf.Inscripcion">Details</a>
+        </li>
+    }
+</ul>
